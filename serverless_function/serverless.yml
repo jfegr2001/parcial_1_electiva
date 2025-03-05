@@ -1,0 +1,18 @@
+service: aws-python-http-api-project2
+frameworkVersion: ">=3"
+
+provider:
+  name: aws
+  runtime: python3.9
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+
+plugins:
+  - serverless-python-requirements
+  - serverless-offline
