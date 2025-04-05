@@ -2,3 +2,24 @@ node_modules/
 Docker/Config
 
 Docker/Config/mysql/
+
+
+# Ignorar archivos y directorios de MySQL generados por Docker
+Docker/Config/mysql/
+
+# Ignorar archivos temporales de bases de datos InnoDB
+# (si los hay)
+Docker/Config/mysql/#*
+
+# Ignorar archivos de log y bases de datos temporales
+*.log
+*.sql
+*.dblwr
+
+# Ignorar archivos de configuración de IDEs y editores comunes
+.idea/
+.vscode/
+
+# Ignorar archivos de sistema
+*.swp
+*.bak
